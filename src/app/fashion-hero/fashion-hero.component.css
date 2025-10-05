@@ -310,6 +310,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 20px 15px; /* thoda kam padding mobile ke liye */
+  }
+
   .main-heading {
     font-size: 36px;
   }
@@ -324,14 +328,23 @@
 
   .image-grid {
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .grid-column {
+    flex-direction: row; 
     gap: 10px;
+    flex-wrap: wrap;
   }
 
-  .grid-item {
-    width: 120px !important;
-    height: 160px !important;
+  .grid-item, 
+  .grid-column {
+    width: 100% !important; 
+    max-width: 320px; 
+  }
+
+  .grid-item img {
+    border-radius: 8px; 
   }
 }
